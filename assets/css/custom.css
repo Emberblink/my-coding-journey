@@ -1,0 +1,47 @@
+/* Resize the images for portfolio icons */
+.portfolio-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+  vertical-align: middle; /* Align with the middle of the text */
+  margin-right: 8px; /* Add some space between the icon and the text */
+  display: inline-block; /* Ensure the icon stays inline with text */
+  vertical-align: middle; /* Align with text vertically */
+}
+
+/* Custom container for embedded projects */
+.project-demo-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-demo-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-demo-card iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 8px;
+}
+
+.project-demo-card .note {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .project-demo-card iframe {
+    height: 400px;
+  }
+}
