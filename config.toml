@@ -2,7 +2,6 @@ baseURL = "http://localhost/"
 languageCode = "en-us"
 title = "Torr's Coding Journey"
 enableRobotsTXT = true
-
 theme = "hextra"  # Set Hextra as the default theme
 
 [pagination]
