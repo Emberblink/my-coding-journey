@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="hx-p-8">
+  <h1 class="hx-text-4xl hx-font-bold">🐍 Python Projects</h1>
+  <p class="hx-mt-4 hx-text-lg hx-text-gray-600 dark:hx-text-gray-300">
+    Exploring Python through automation scripts, small projects, and hands-on learning.
+  </p>
+
+  <div class="hx-grid hx-grid-cols-1 md:hx-grid-cols-2 lg:hx-grid-cols-3 hx-gap-8 hx-mt-8">
+    {{ range where .Site.RegularPages "Type" "portfolio" }}
+      {{ if in .File.Path "python" }}
+        <div class="project-card hx-bg-white dark:hx-bg-neutral-800 hx-rounded-xl hx-shadow-md hover:hx-shadow-lg hx-transition hx-overflow-hidden">
+          {{ with .Params.cover.image }}
+            <a href="{{ .RelPermalink }}">
+              <img src="{{ . }}" alt="{{ .Params.cover.alt | default "Project thumbnail" }}" class="hx-w-full hx-aspect-[16/9] hx-object-cover">
+            </a>
+          {{ end }}
+          <div class="hx-p-4">
+            <h3 class="hx-text-lg hx-font-bold hx-mb-2">
+              <a href="{{ .RelPermalink }}" class="hover:hx-underline">{{ .Title }}</a>
+            </h3>
+            <p class="hx-text-gray-600 dark:hx-text-gray-400 hx-text-sm">
+              {{ .Params.summary | default "No description available." }}
+            </p>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

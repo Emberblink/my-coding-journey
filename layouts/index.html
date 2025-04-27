@@ -1,0 +1,65 @@
+{{ define "main" }}
+<section class="landing-page hx-text-center hx-p-12">
+  <h1 class="hx-text-4xl hx-font-bold">Welcome to Torr's Coding Journey 👋</h1>
+  <p class="hx-mt-4 hx-text-lg hx-text-gray-600 dark:hx-text-gray-300">
+    Learning Python, GDScript, and building small games and projects!
+  </p>
+
+  <div class="hx-mt-6 hx-flex hx-justify-center hx-gap-4">
+    <a href="/portfolio/" class="hx-bg-blue-600 hover:hx-bg-blue-700 hx-text-white hx-font-bold hx-py-2 hx-px-6 hx-rounded-full">View Portfolio</a>
+    <a href="/blog/" class="hx-bg-gray-300 dark:hx-bg-gray-700 hover:hx-bg-gray-400 dark:hover:hx-bg-gray-600 hx-font-bold hx-py-2 hx-px-6 hx-rounded-full">Read Blog</a>
+  </div>
+</section>
+
+<section class="hx-p-8">
+  <h2 class="hx-text-2xl hx-font-bold hx-mb-4">📝 Latest Blog Posts</h2>
+  <div class="hx-space-y-4">
+    {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+      <div>
+        <a href="{{ .RelPermalink }}" class="hx-text-blue-600 hover:hx-underline hx-text-lg">{{ .Title }}</a>
+        <p class="hx-text-gray-600 dark:hx-text-gray-400">{{ .Summary }}</p>
+      </div>
+    {{ else }}
+      <p class="hx-text-gray-500">No blog posts yet. Stay tuned!</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="hx-p-8">
+  <h2 class="hx-text-2xl hx-font-bold hx-mb-4">🛠️ Featured Projects</h2>
+
+  <div class="hx-grid hx-grid-cols-1 md:hx-grid-cols-2 lg:hx-grid-cols-3 hx-gap-6">
+    {{ range first 3 (where (where .Site.RegularPages "Type" "portfolio") "Kind" "page") }}
+    <div class="project-card hx-bg-white dark:hx-bg-neutral-800 hx-rounded-xl hx-shadow-md hover:hx-shadow-lg hx-transition overflow-hidden">
+      {{ $page := . }}
+      {{ with $page.Params.cover.image }}
+        <div class="hx-w-full hx-h-48">
+          <img src="{{ . }}" alt="{{ $page.Params.cover.alt }}" class="hx-w-full hx-h-full hx-object-cover">
+        </div>
+      {{ end }}
+      <div class="hx-p-4">
+        <h3 class="hx-text-xl hx-font-semibold hx-mb-2">
+          <a href="{{ $page.RelPermalink }}" class="hover:hx-underline">{{ $page.Title }}</a>
+        </h3>
+        <p class="hx-text-gray-600 dark:hx-text-gray-400">
+          {{ with $page.Params.summary }}{{ . }}{{ end }}
+        </p>
+      </div>
+    </div>
+    
+      </div>
+    {{ else }}
+      <p class="hx-text-gray-500">No projects yet. Stay tuned!</p>
+    {{ end }}
+  </div>
+</section>
+
+
+<section class="hx-p-8 hx-text-center">
+  <h2 class="hx-text-2xl hx-font-bold hx-mb-4">👤 About Me</h2>
+  <p class="hx-text-lg hx-text-gray-600 dark:hx-text-gray-300">
+    I'm Torr, a passionate learner focusing on Python, GDScript, and Godot projects!
+  </p>
+  <a href="/about/" class="hx-inline-block hx-mt-4 hx-text-blue-600 hover:hx-underline">Learn more about me →</a>
+</section>
+{{ end }}

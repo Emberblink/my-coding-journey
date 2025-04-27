@@ -1,47 +1,110 @@
-/* Resize the images for portfolio icons */
+/* --------------------------------------------
+   Portfolio Category Icons (Python, Godot logos)
+-------------------------------------------- */
 .portfolio-icon {
-  width: 20px; /* Adjust size as needed */
-  height: 20px;
-  vertical-align: middle; /* Align with the middle of the text */
-  margin-right: 8px; /* Add some space between the icon and the text */
-  display: inline-block; /* Ensure the icon stays inline with text */
-  vertical-align: middle; /* Align with text vertically */
+  width: 20px; /* Set width of icon */
+  height: 20px; /* Set height of icon */
+  vertical-align: middle; /* Align icon vertically with text */
+  margin-right: 8px; /* Add space between icon and text */
+  display: inline-block; /* Keep icon inline with text */
 }
 
-/* Custom container for embedded projects */
+/* --------------------------------------------
+   Embedded Project Card (for Trinket/iframe demos)
+-------------------------------------------- */
 .project-demo-card {
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
-  max-width: 800px;
+  background-color: #f9f9f9; /* Light background for iframe card */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Space inside card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 20px 0; /* Margin around the card */
+  max-width: 800px; /* Limit max width */
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; /* Center the card horizontally */
 }
 
+/* Title inside the project demo card */
 .project-demo-card h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #333; /* Dark gray title color */
 }
 
+/* Embedded iframe inside the demo card */
 .project-demo-card iframe {
   width: 100%;
   height: 500px;
   border: none;
-  border-radius: 8px;
+  border-radius: 8px; /* Rounded corners for iframe */
 }
 
+/* Small note under iframe */
 .project-demo-card .note {
   font-size: 0.9rem;
-  color: #777;
+  color: #777; /* Light gray note text */
   margin-top: 8px;
 }
 
-/* Responsive adjustments */
+/* Responsive: Make iframe smaller on small screens */
 @media (max-width: 600px) {
   .project-demo-card iframe {
     height: 400px;
   }
+}
+
+/* --------------------------------------------
+   Project Cards (Homepage Portfolio Cards)
+-------------------------------------------- */
+.project-card {
+  border-radius: 12px; /* Rounded card corners */
+  overflow: hidden; /* Hide any content overflow */
+  background-color: #ffffff; /* White background for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animations */
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+  transform: translateY(-6px); /* Lift card upward */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Dark mode hover effect for cards */
+@media (prefers-color-scheme: dark) {
+  .project-card:hover {
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); /* Light white glow in dark mode */
+  }
+}
+
+/* Link hover inside cards */
+.project-card a:hover {
+  color: #2563eb; /* Tailwind's blue-600 color */
+  text-decoration: underline; /* Underline on hover */
+  transition: color 0.2s ease-in-out;
+}
+
+/* Project card image styling (Homepage) */
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16/9; /* Force 16:9 widescreen layout */
+  object-fit: cover; /* Ensure image covers full area without stretching */
+}
+
+/* --------------------------------------------
+   Thumbnail Styling (Inside Individual Projects)
+-------------------------------------------- */
+.project-thumbnail img {
+  width: 100%; /* Make image responsive */
+  max-width: 225px; /* Limit image width */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 12px; /* Rounded image corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border: 3px solid #60a5fa; /* Light blue border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth hover transitions */
+}
+
+/* Hover effect for project thumbnails */
+.project-thumbnail img:hover {
+  transform: scale(1.02); /* Slight zoom in */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  border-color: #3b82f6; /* Darker blue border on hover */
 }

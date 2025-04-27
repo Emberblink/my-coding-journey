@@ -21,6 +21,11 @@ theme = "hextra"  # Set Hextra as the default theme
   defaultTheme = "dark"
   description = "A blog and portfolio about Torr's journey learning to code."
 
+  [params.footer]
+    displayPoweredBy = true
+    displayCopyright = true
+    copyright = "© 2025 Torr's Coding Journey. All rights reserved."
+
   [params.navbar]
     links = [
       { name = "About", url = "/about/" },

@@ -1,6 +1,8 @@
 ---
 title: "Home"
 layout: "home"
+type: "home"
+
 
 hero:
   title: "Welcome to My Coding Journey 👋"

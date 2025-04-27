@@ -10,12 +10,19 @@ tags:
 cover:
   image: "/images/band-name-generator.png"
   alt: "Band Name Generator"
+summary: "Generate fun band names based on your city and pet’s name!"
 draft: false
 ---
 
 # 🎸 Band Name Generator
 
-![Project Image](/images/band-name-generator.png)
+<div class="project-badge hx-inline-block hx-mb-6 hx-px-4 hx-py-1.5 hx-bg-blue-500 dark:hx-bg-blue-400 hx-text-white hx-text-sm hx-font-bold hx-rounded-full hx-shadow-md">
+  Beginner Project
+</div>
+
+<div class="project-thumbnail hx-mx-auto hx-my-8 hx-w-72">
+  <img src="/images/band-name-generator.png" alt="Band Name Generator" class="hx-rounded-lg hx-shadow-lg hx-w-full hx-h-auto">
+</div>
 
 **Description:**  
 A fun little Python project that generates creative band names using your city and pet’s name!
@@ -24,11 +31,12 @@ A fun little Python project that generates creative band names using your city a
 
 ## 🎮 Live Demo
 
-<div class="project-demo-card">
-  <h2>Try it out!</h2>
-  <iframe src="https://trinket.io/embed/python/1b194acdf36e?outputOnly=true&runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-  <p class="note">Note: This demo runs on an embedded Python environment.</p>
+<div class="live-demo-card hx-bg-gray-100 dark:hx-bg-neutral-800 hx-rounded-xl hx-p-6 hx-shadow-lg hx-max-w-4xl hx-mx-auto hx-my-10">
+  <h2 class="hx-text-xl hx-font-bold hx-text-center hx-mb-6">🎮 Try It Out!</h2>
+  <iframe src="https://trinket.io/embed/python/1b194acdf36e?outputOnly=true&runOption=run" class="hx-w-full hx-h-[600px] hx-rounded-lg"></iframe>
+  <p class="hx-text-center hx-text-sm hx-text-gray-600 dark:hx-text-gray-400 hx-mt-4">Note: This demo runs inside an embedded Python environment.</p>
 </div>
+
 
 ---
 
